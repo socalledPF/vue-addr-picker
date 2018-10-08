@@ -1,27 +1,41 @@
 # vue-addr-picker
 
-> A Vue.js project
+# 描述
+  这是一款基于`mint-ui`的城市选择器组件
+  
+# 快速开始
 
-## Build Setup
 
-``` bash
-# install dependencies
-npm install
+1. 安装插件:
+``` npm install -S vue-addr-picker```
 
-# serve with hot reload at localhost:8080
-npm run dev
+2. 将插件加入Vue项目中:
+```javascript
+  import Vue from 'vue';
+  import CityPicker from 'vue-addr-picker';
+  Vue.use(CityPicker)
+```
+3.然后在.vue 文件中使用组件
 
-# build for production with minification
-npm run build
+```html 
+  <city-picker ref="citypicker" @confirm="getCity"></city-picker>
 
-# build for production and view the bundle analyzer report
-npm run build --report
+  <button @click="open('citypicker')"></button>
 
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+```javascript
+  export default {
+    methods: {
+      open(picker) {
+        this.$refs[picker].open();
+      }
+    },
+    getCity(city) {
+      //处理选择的城市
+      console.log(city) //得到选择的城市数据
+    }
+  }
+
+
+```
