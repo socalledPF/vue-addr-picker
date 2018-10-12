@@ -41,3 +41,6 @@
 ```
 # 仓库地址
 [码云仓库地址](https://gitee.com/fery/vue-addr-picker)
+
+# demo 
+[![在线demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/53m085z024)

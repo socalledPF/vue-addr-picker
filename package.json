@@ -1,6 +1,6 @@
 {
   "name": "vue-addr-picker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Vue.js project",
   "author": "Fery Pan <panfeng1991@gmail.com>",
   "main": "dist/vue-addr-picker.umd.js",
@@ -26,5 +26,11 @@
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
-  }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/socalledPF/vue-addr-picker"
+  },
+  "homepage": "https://53m085z024.codesandbox.io/#/"
 }
