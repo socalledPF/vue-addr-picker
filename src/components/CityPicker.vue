@@ -79,16 +79,12 @@ export default {
     confirm() {
       this.visible = false;
       this.$emit("confirm", this.currentValue);
-      this.handleValueChange();
     },
     onChange(picker, values) {
       if (myaddress[values[0]]) {
         //这个判断类似于v-if的效果（可以不加，但是vue会报错，很不爽）
         picker.setSlotValues(1, Object.keys(myaddress[values[0]])); //  Object.keys()会返回一个数组，当前省的数组
         picker.setSlotValues(2, myaddress[values[0]][values[1]]); //  区/县数据就是一个数组
-        this.myAddressProvince = values[0];
-        this.myAddressCity = values[1];
-        this.myAddresscounty = values[2];
       }
       this.currentValue = picker.getValues();
     },
@@ -98,10 +94,6 @@ export default {
     },
     close() {
       this.visible = false;
-    },
-
-    handleValueChange() {
-      this.$emit("input", this.currentValue);
     },
   }
 };
