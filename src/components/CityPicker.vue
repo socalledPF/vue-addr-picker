@@ -21,8 +21,8 @@ import myaddress from "../data/pca.json";
 
 export default {
   components: {
-    [Popup.name]: Popup,
-    [Picker.name]: Picker
+    Popup,
+    Picker
   },
   data() {
     return {

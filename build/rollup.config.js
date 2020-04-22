@@ -1,6 +1,6 @@
 import vue from 'rollup-plugin-vue';
-import buble from 'rollup-plugin-buble';
 import json from 'rollup-plugin-json';
+import resolve from 'rollup-plugin-node-resolve';
 
 export default {
   input: 'src/index.js',
@@ -14,6 +14,10 @@ export default {
       compilerTemplate: true,
     }),
     json(),
+    resolve({
+      // pass custom options to the resolve plugin
+    }),
+    // buble()
   ],
-  external: ['mint-ui', 'mint-ui/lib/style.css']
+  external: ['mint-ui', 'mint-ui/lib/style.css'],
 };
